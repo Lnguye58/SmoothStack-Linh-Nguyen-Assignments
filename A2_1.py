@@ -13,4 +13,4 @@ print(set('Mississippi'))
 
 """ 5.	The word or whole phrase which has the same sequence of letters in both directions is called a palindrome."""
 
-
+#Palindrome
