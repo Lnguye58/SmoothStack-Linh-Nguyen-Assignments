@@ -1,4 +1,4 @@
-""" 1.	1.	Write a string that returns just the letter ‘r’ from ‘Hello World’
+""" 1.	Write a string that returns just the letter ‘r’ from ‘Hello World’
 For example, ‘Hello World’[0] returns ‘H’. You should write one line of code. Don’t assign a variable name to the string."""
 print('Hello World'[8])
 
