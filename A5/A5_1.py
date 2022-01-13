@@ -14,3 +14,19 @@
     We will not discuss how proper or improper this gradation is. Instead you should simply calculate grades for several people.
 """
 
+def BMI():
+
+    height = float(input("Enter height in meters: "))
+    weight = float(input("Enter weight in kg: "))
+    bmi = weight/(height**2) 
+
+    if (bmi < 18.5):
+        print("Underweight")
+    elif (bmi >= 18.5 and bmi < 25.0):
+        print("Normal weight")
+    elif (bmi >= 25.0 and bmi < 30.0):
+        print("Overweight")
+    elif (bmi >= 30.0):
+        print("Obesity")
+
+BMI()
