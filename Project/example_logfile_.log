@@ -1,0 +1,24 @@
+0219202112:00:01[INFO  ]:/u000/Informatica/PowerCenter10.4.1/server/infa_shared/Scripts/AOS_Filechecker.pyStarted.
+0219202112:00:01[INFO  ]:Writing to log [/tmp/AOS_Filechecker.py_20210219120001_25187.log]
+0219202112:00:01[INFO  ]:Files List : ['/u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210129.csv', '/u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210205.csv', '/u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210212.csv', '/u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210219.csv']
+0219202112:00:01[INFO  ]:Lastest File : /u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210219.csv
+0219202112:00:01[INFO  ]:File Before Latest File : /u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210212.csv
+0219202112:00:01[INFO  ]:/u000/Informatica/PowerCenter10.4.1/server/infa_shared/SrcFiles/AOS/NYL/NYL_FieldAgent_20210219.csv
+0219202112:00:01[INFO  ]:Executing:[psql -c "select case when count(1) >= 1 then 'YES' else 'NO' end from aos.AOS_FILE_VALIDATE_LOG where FILE_NAME='NYL_FieldAgent_20210219.csv' and PROCESSED_FLG='1'"]
+0219202112:00:01[INFO  ]:Command is successful
+0219202112:00:01[INFO  ]:[b' CASE \n------\n NO\n(1 row)\n\n', b'']
+0219202112:00:01[INFO  ]:Verified,File was not loaded before.
+0219202112:00:01[INFO  ]:File Fields are Replaced for NY file
+0219202112:00:01[INFO  ]:Basename of the Latest File : NYL_FieldAgent_20210219.csv
+0219202112:00:01[INFO  ]:Date value extracted from file : 20210219
+0219202112:00:01[INFO  ]:The File before Latest : NYL_FieldAgent_20210212.csv
+0219202112:00:01[INFO  ]:New File Obtained count :2107
+0219202112:00:01[INFO  ]:File before latest File count : 2101
+0219202112:00:01[INFO  ]:Percentage line count difference for both of files : -0.28476506881822494
+0219202112:00:01[INFO  ]:Executing ....
+0219202112:00:01[INFO  ]:psql -c "INSERT INTO aos.AOS_FILE_VALIDATE_LOG VALUES('2021-02-19 12:00:01.910600','NYL_FieldAgent_20210219.csv','20210219','NYL_FieldAgent_20210212.csv','NYL_FieldAgent_20210212.csv','0','2107','2101','5','0')" 
+0219202112:00:01[INFO  ]:Executing:[psql -c "INSERT INTO aos.AOS_FILE_VALIDATE_LOG VALUES('2021-02-19 12:00:01.910600','NYL_FieldAgent_20210219.csv','20210219','NYL_FieldAgent_20210212.csv','NYL_FieldAgent_20210212.csv','0','2107','2101','5','0')" ]
+0219202112:00:02[INFO  ]:Command is successful
+0219202112:00:02[INFO  ]:Creating File List
+0219202112:00:02[INFO  ]:Sending mail :[echo "AOS File Validation row has inserted in the table"|mutt -s "AOS File Validation Completed" -a "/tmp/AOS_Filechecker.py_20210219120001_25187.log" -- ]
+0219202112:00:02[INFO  ]:Executing:[echo "AOS File Validation row has inserted in the table"|mutt -s "AOS File Validation Completed" -a "/tmp/AOS_Filechecker.py_20210219120001_25187.log" --  ]
